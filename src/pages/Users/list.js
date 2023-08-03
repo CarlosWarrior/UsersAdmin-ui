@@ -84,8 +84,6 @@ const Users = () => {
           <TableHead>
             <TableRow>
               <TableCell alignt="left">Usuario</TableCell>
-              <TableCell alignt="left">Permisos</TableCell>
-  						<TableCell alignt="left">Admin</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -97,8 +95,6 @@ const Users = () => {
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
                 <TableCell align="left">{user.username}</TableCell>
-                <TableCell align="left">{user.permissions}</TableCell>
-                <TableCell align="left">{user.admin}</TableCell>
               </TableRow>
             ))}
           </TableBody>
