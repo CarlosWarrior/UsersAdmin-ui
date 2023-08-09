@@ -6,7 +6,7 @@ import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
 import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
-import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import ExpandLess from '@mui/icons-material/ExpandLess'
@@ -54,12 +54,12 @@ export default function TemporaryDrawer() {
         >
           <List>
             {pages.app.map((page, index) => (
-              <ListItem button key={"navlink-"+index} onClick={(e) => navTo(e,page.link)}>
+              <ListItemButton key={"navlink-"+index} onClick={(e) => navTo(e,page.link)}>
                 <ListItemIcon>
                   {page.icon}
                 </ListItemIcon>
                 <ListItemText primary={page.name} />
-              </ListItem>
+              </ListItemButton>
             ))}
           </List>
           <Divider />
