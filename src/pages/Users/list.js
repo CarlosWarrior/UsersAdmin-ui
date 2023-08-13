@@ -28,7 +28,7 @@ const UsersToolbar = (props) => {
 
   const [deleteDialog, setDeleteDialog] = React.useState(false)
   const deleteConfirmation = () => setDeleteDialog(true)
-  const confirmDelete = () => remove(selected) || setDeleteDialog(false)
+  const confirmDelete = () => remove(selected.id) || setDeleteDialog(false)
   const closeDelete = () => setDeleteDialog(false)
 
 
@@ -48,7 +48,7 @@ const UsersToolbar = (props) => {
       </Typography>
       {selected && 
         <React.Fragment>
-          <Tooltip title={"Editar User "}>
+          <Tooltip title={"Editar Usuario "}>
             <IconButton onClick={edit}>
               <EditIcon />
             </IconButton>

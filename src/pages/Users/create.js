@@ -17,9 +17,9 @@ const UsersCreate = ({open, close, model,  ...rest}) => {
     <Dialog onClose={close} open={open}>
       <DialogTitle>{scope} Paquete</DialogTitle>
       <ObjectForm ignored={['id']} recall={recall} submit={submit}
-        obj={{username:'', password:'', repassword:'', admin:'',}}
-        labels={{username:'Usuario', password:'Contraseña',  repassword:'Confirmación', admin:'Es Admin?'}}
-        types={{username:'text', password:'password',  repassword:'password', admin:'check'}}
+        obj={{username:'', password:'', repassword:''}}
+        labels={{username:'Usuario', password:'Contraseña',  repassword:'Confirmación'}}
+        types={{username:'text', password:'password',  repassword:'password'}}
         changed={model?{...model}:{}} 
       />
       <Button onClick={() => {setRecall(true);close()}}>{scope}</Button>

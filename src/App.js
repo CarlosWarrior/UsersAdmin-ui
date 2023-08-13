@@ -24,7 +24,7 @@ function App() {
           </Routes>
         </AppProvider>
       :<Routes>
-          <Route path="/login" element={<Login/>}/>
+          <Route path="*" element={<Login/>}/>
       </Routes>
     }
     </div>

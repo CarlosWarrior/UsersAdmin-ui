@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from '../axios'
+import config from '../config.json'
 import FormControl from '@mui/material/FormControl'
 import TextField from '@mui/material/TextField'
 import Paper from '@mui/material/Paper'
@@ -19,12 +20,12 @@ const Login = props => {
 			username:getRefValue(usernameRef),
 			password:getRefValue(passwordRef),
 		}).then(res => {
-			localStorage.setItem("lemonsmx-token",res.data)
+			localStorage.setItem(config.tokenName, res.data)
 			window.location.href='/'
 		})
 			.catch((res) => {
 				setDisabled(false)
-				localStorage.removeItem("lemonsmx-token")
+				localStorage.removeItem(config.tokenName)
 			})
 	return (
 		<Box type="form" sx={{
