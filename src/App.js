@@ -1,7 +1,6 @@
 import React from 'react'
 import {Routes, Route, Navigate } from 'react-router-dom'
 import CircularProgress from "@mui/material/CircularProgress"
-import Nav from './layout/Nav'
 import PrivateRoute from './public/PrivateRoute'
 import Login from './public/Login'
 import Users from './pages/Users'
@@ -17,7 +16,6 @@ function App() {
       
     {auth? 
         <AppProvider>
-          <Nav/>
           <Routes>
             <Route path="/" element={ <PrivateRoute component={<Users/>} Loader={Loader}/> }/>
             <Route path="/users" element={ <PrivateRoute component={<Users/>} Loader={Loader}/> }/>

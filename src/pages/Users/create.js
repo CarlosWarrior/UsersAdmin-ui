@@ -15,7 +15,7 @@ const UsersCreate = ({open, close, model,  ...rest}) => {
   const submit = d=>  model?update(d):create(d)
   return (
     <Dialog onClose={close} open={open}>
-      <DialogTitle>{scope} Paquete</DialogTitle>
+      <DialogTitle>{scope} Usuario</DialogTitle>
       <ObjectForm ignored={['id']} recall={recall} submit={submit}
         obj={{username:'', password:'', repassword:''}}
         labels={{username:'Usuario', password:'Contraseña',  repassword:'Confirmación'}}
